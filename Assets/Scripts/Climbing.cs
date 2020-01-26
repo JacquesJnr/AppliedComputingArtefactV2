@@ -23,6 +23,7 @@ public class Climbing : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 300;
         myAudio = FindObjectOfType<AudioManager>();
         soundPlayed = false;
     }

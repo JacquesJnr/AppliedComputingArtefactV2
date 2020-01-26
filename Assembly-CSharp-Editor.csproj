@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{38535DB0-138A-0723-187A-C8BAAAE5551F}</ProjectGuid>
+    <ProjectGuid>{3F4B7880-48B9-2372-1BBD-73C25FCB371E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -106,46 +106,46 @@
     <Compile Include="Assets\Cinemachine\PostFX\Editor\PostFXAutoImport.cs" />
     <Compile Include="Assets\Cinemachine\Timeline\Editor\CinemachineShotEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity/Hub/2019.2.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -346,7 +346,7 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/Jacques' PC/Documents/Unity/Artefact/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/Jacques' PC/Documents/Unity/AppliedComputingArtefactV2/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:/Unity/Hub/2019.2.14f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -711,7 +711,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{B3650223-1B1A-E631-E2B7-8C879D8926C3}</Project>
+      <Project>{6FE0EF3F-6678-E610-9CDA-48770F2D2FBD}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
   </ItemGroup>
