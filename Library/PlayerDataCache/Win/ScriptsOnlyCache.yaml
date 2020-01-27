@@ -8,7 +8,10 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineTransposer
     - Cinemachine.CinemachineVirtualCamera
     - Climbing
+    - DeathScreen
+    - EndGame
     - HighlightKey
+    - PauseScreen
     - Score
     - parallaxing
     Unity.2D.Tilemap.Editor.dll:
@@ -25,8 +28,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -34,8 +39,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/MovementTest.unity:
@@ -57,11 +65,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 68
+      Script: {instanceID: 0}
     - Class: 70
+      Script: {instanceID: 0}
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -70,33 +86,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9870}
     - Class: 114
-      Script: {instanceID: 9928}
+      Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 10144}
+      Script: {instanceID: 9930}
     - Class: 114
-      Script: {instanceID: 10952}
+      Script: {instanceID: 10146}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 10228}
     - Class: 114
-      Script: {instanceID: 11544}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 11888}
+      Script: {instanceID: 10956}
     - Class: 114
-      Script: {instanceID: 12192}
+      Script: {instanceID: 11390}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 11548}
+    - Class: 114
+      Script: {instanceID: 11718}
+    - Class: 114
+      Script: {instanceID: 11746}
+    - Class: 114
+      Script: {instanceID: 11892}
+    - Class: 114
+      Script: {instanceID: 12196}
     - Class: 114
       Script: {instanceID: 12550}
     - Class: 114
-      Script: {instanceID: 12802}
+      Script: {instanceID: 12554}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 12806}
     - Class: 114
-      Script: {instanceID: 13186}
+      Script: {instanceID: 13004}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13306}
+      Script: {instanceID: 13232}
+    - Class: 114
+      Script: {instanceID: 13310}
+    - Class: 114
+      Script: {instanceID: 34128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -178,7 +206,13 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 0b59f2c8038356fcd2b947d00656de11
+      Hash: a6263d5f076f08b851aaba0076457a28
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeathScreen
+  - hash:
+      serializedVersion: 2
+      Hash: ea93ed692155cf96f548421601607660
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioManager
@@ -260,6 +294,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: b0644c61f2670db7f23597f9391738d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseScreen
   - hash:
       serializedVersion: 2
       Hash: f542c1afca5bb4022f91fdda19b8d622
@@ -934,10 +974,10 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4a95badb3f32f9d5bc48f811f59c0b58
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DeathScreen
+    className: EndGame
   platform: 5
   scenePathNames:
   - Assets/Scenes/MovementTest.unity

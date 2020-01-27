@@ -118,9 +118,11 @@
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Climbing.cs" />
     <Compile Include="Assets\Scripts\DeathScreen.cs" />
+    <Compile Include="Assets\Scripts\EndGame.cs" />
     <Compile Include="Assets\Scripts\HighlightKey.cs" />
     <Compile Include="Assets\Scripts\MoveToLetter.cs" />
     <Compile Include="Assets\Scripts\parallaxing.cs" />
+    <Compile Include="Assets\Scripts\PauseScreen.cs" />
     <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\Sounds.cs" />
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />

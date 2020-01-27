@@ -26,6 +26,8 @@ public class HighlightKey : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = unselected;
         }
+
+        
     }
 
     void GetKey()

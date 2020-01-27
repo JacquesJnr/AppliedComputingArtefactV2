@@ -8,6 +8,7 @@ TagManager:
   - Hands
   - background
   - floor
+  - Trophie
   layers:
   - Default
   - TransparentFX

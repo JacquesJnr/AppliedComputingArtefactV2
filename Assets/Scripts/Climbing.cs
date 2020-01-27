@@ -6,25 +6,27 @@ using UnityEngine;
 
 public class Climbing : MonoBehaviour
 {
-    public Rigidbody2D torso, leftArm, rightArm;
-    public GameObject left, right, foreArmLeft, foreArmRight;
-    public GameObject leftTarget, rightTarget;
-    private float radius = 0.5f;
-    private string keyString;
-    public KeyCode currentKey;
-    public LayerMask WhatIsLeft, WhatIsRight;
+    public Rigidbody2D torso, leftArm, rightArm; // The limbs being controlled by physics
+    public GameObject left, right, foreArmLeft, foreArmRight; // The limbs being controlled by Vector2
+    public GameObject leftTarget, rightTarget; //Target positions of each hand
+    private float radius = 0.5f; // Radius of the overlap circle
+    private string keyString; //Current keycode as a string
+    public KeyCode currentKey; //Current keycode 
+    public LayerMask WhatIsLeft, WhatIsRight; // Layer masks to check for the player's hands
     public bool leftHandAttached, rightHandAttached, noHands;
     private bool soundPlayed;
 
-    private AudioManager myAudio;
+    private AudioManager myAudio; // My audio manager class
 
     public List<string> inputs = new List<string>();
 
+    // Sets the desired frame rate and gives a reference to the audio class
     private void Start()
     {
         Application.targetFrameRate = 300;
         myAudio = FindObjectOfType<AudioManager>();
         soundPlayed = false;
+        myAudio.Play("Ambient");
     }
 
     private void FixedUpdate()
@@ -50,10 +52,11 @@ public class Climbing : MonoBehaviour
             noHands = false;
         }
 
-        keyString = currentKey.ToString();
+        keyString = currentKey.ToString(); 
         var lowerLeft = leftTarget.name.ToString();
         var lowerRight = rightTarget.name.ToString();
 
+        // Sets the current hand's rigidbody to static if the player is holding the current key
         if (leftTarget != null)
         {
             if (leftHandAttached && Input.GetKey(lowerLeft.ToLower()))
@@ -78,6 +81,7 @@ public class Climbing : MonoBehaviour
             }
         }
 
+        // Stabilises the hinge joints on the player's limbs
         left.GetComponent<Rigidbody2D>().centerOfMass = Vector2.zero;
         left.GetComponent<Rigidbody2D>().inertia = 1.0f;
         leftArm.centerOfMass = Vector2.zero;
@@ -95,29 +99,27 @@ public class Climbing : MonoBehaviour
         {
             if (noHands)
             {
-                leftTarget = GameObject.Find(currentKey.ToString());
+                leftTarget = GameObject.Find(currentKey.ToString()); // Set the left target to the current keycode as a string
                 MoveLeft();
             }
 
             if (leftHandAttached)
             {
-                //PlayOnce();
                 if (Input.GetKey(keyString.ToLower()))
                 {
-                    rightTarget = GameObject.Find(currentKey.ToString());
+                    rightTarget = GameObject.Find(currentKey.ToString()); // Set the right target to the current keycode as a string
                 }
 
-                if (rightTarget != leftTarget)
+                if (rightTarget != leftTarget) //Checks that current target and the previous target aren't the same
                 {
                     MoveRight();
                 }
 
-                torso.bodyType = RigidbodyType2D.Dynamic;
+                torso.bodyType = RigidbodyType2D.Dynamic; // The torso is static on start, when the player starts climbing make it move
             }
 
             if (rightHandAttached)
             {
-                //PlayOnce();
                 if (Input.GetKey(keyString.ToLower()))
                 {
                     leftTarget = GameObject.Find(currentKey.ToString());
@@ -136,7 +138,7 @@ public class Climbing : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                myAudio.Play("GruntStart");
+                myAudio.Play("GruntStart"); // Plays audio from the audio class 
             }
 
             if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -147,6 +149,7 @@ public class Climbing : MonoBehaviour
         }
     }
 
+    //Gets a string of the current key being pressed and converts to a keycode
     private void GetKeyCode()
     {
         if (Input.anyKey)
@@ -156,28 +159,25 @@ public class Climbing : MonoBehaviour
         }
     }
 
+    //Move the left arm towards the letter being pressed
     private void MoveLeft()
     {
-        left.transform.position = Vector2.MoveTowards(left.transform.position, leftTarget.transform.position, 10f * Time.deltaTime);
-        foreArmLeft.transform.position = Vector2.MoveTowards(foreArmLeft.transform.position, leftTarget.transform.position, 10f * Time.deltaTime);
-        leftArm.AddForce(transform.up * 10f);
+        left.transform.position = Vector2.MoveTowards(left.transform.position, leftTarget.transform.position, 12f * Time.deltaTime);
+        foreArmLeft.transform.position = Vector2.MoveTowards(foreArmLeft.transform.position, leftTarget.transform.position, 12f * Time.deltaTime);
+        //leftArm.AddForce(transform.up * 10f);
     }
 
+    //Move the right arm towards the letter being pressed
     private void MoveRight()
     {
-        right.transform.position = Vector2.MoveTowards(right.transform.position, rightTarget.transform.position, 10f * Time.deltaTime);
-        foreArmRight.transform.position = Vector2.MoveTowards(foreArmRight.transform.position, rightTarget.transform.position, 10f * Time.deltaTime);
-        rightArm.AddForce(transform.up * 10f);
+        right.transform.position = Vector2.MoveTowards(right.transform.position, rightTarget.transform.position, 12f * Time.deltaTime);
+        foreArmRight.transform.position = Vector2.MoveTowards(foreArmRight.transform.position, rightTarget.transform.position, 12f * Time.deltaTime);
+        //rightArm.AddForce(transform.up * 10f);
     }
 
-
+    //Move the torso upwards
     private void Thrust()
     {
         torso.AddForce(Vector2.up * 40f, ForceMode2D.Impulse);
-    }
-
-    private void PlayOnce()
-    {
-        
     }
 }
