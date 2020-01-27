@@ -117,6 +117,7 @@
     <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Climbing.cs" />
+    <Compile Include="Assets\Scripts\DeathScreen.cs" />
     <Compile Include="Assets\Scripts\HighlightKey.cs" />
     <Compile Include="Assets\Scripts\MoveToLetter.cs" />
     <Compile Include="Assets\Scripts\parallaxing.cs" />

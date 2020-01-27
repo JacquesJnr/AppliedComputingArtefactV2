@@ -158,22 +158,22 @@ public class Climbing : MonoBehaviour
 
     private void MoveLeft()
     {
-        left.transform.position = Vector2.MoveTowards(left.transform.position, leftTarget.transform.position, 15f * Time.deltaTime);
-        foreArmLeft.transform.position = Vector2.MoveTowards(foreArmLeft.transform.position, leftTarget.transform.position, 5f * Time.deltaTime);
+        left.transform.position = Vector2.MoveTowards(left.transform.position, leftTarget.transform.position, 10f * Time.deltaTime);
+        foreArmLeft.transform.position = Vector2.MoveTowards(foreArmLeft.transform.position, leftTarget.transform.position, 10f * Time.deltaTime);
         leftArm.AddForce(transform.up * 10f);
     }
 
     private void MoveRight()
     {
-        right.transform.position = Vector2.MoveTowards(right.transform.position, rightTarget.transform.position, 15f * Time.deltaTime);
-        foreArmRight.transform.position = Vector2.MoveTowards(foreArmRight.transform.position, rightTarget.transform.position, 5f * Time.deltaTime);
+        right.transform.position = Vector2.MoveTowards(right.transform.position, rightTarget.transform.position, 10f * Time.deltaTime);
+        foreArmRight.transform.position = Vector2.MoveTowards(foreArmRight.transform.position, rightTarget.transform.position, 10f * Time.deltaTime);
         rightArm.AddForce(transform.up * 10f);
     }
 
 
     private void Thrust()
     {
-        torso.AddForce(Vector2.up * 65, ForceMode2D.Impulse);
+        torso.AddForce(Vector2.up * 40f, ForceMode2D.Impulse);
     }
 
     private void PlayOnce()
